@@ -59,8 +59,8 @@ export const ClassDetailModal: React.FC<ClassDetailModalProps> = ({
         {/* Top Header Row */}
         <div className="flex items-center justify-between px-5 py-3 border-b border-white/[0.08] bg-[#0f141f]">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-semibold">
-              ACADEMIC DOSSIER // {session.code}
+            <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">
+              CampusFlow DOSSIER // {session.code}
             </span>
             <span className="text-white/20">·</span>
             <span className="text-[10px] font-mono text-slate-400">{session.type}</span>

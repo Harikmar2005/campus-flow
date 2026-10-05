@@ -18,7 +18,7 @@ export const CampusMapModal: React.FC<CampusMapModalProps> = ({
       name: 'Block C (Shannon Annex)',
       code: 'C',
       rooms: ['Room C-204 (Cyber Security)', 'Room C-105 (Cloud Security)'],
-      dist: '240m • 3 min walk',
+      dist: '140m • 3 min walk',
       desc: 'Cyber Defense Lab & Research Floor. Level 2 North Wing.',
       isTarget: true,
     },
@@ -59,7 +59,7 @@ export const CampusMapModal: React.FC<CampusMapModalProps> = ({
           <div className="flex items-center gap-2">
             <Compass className="w-4 h-4 text-amber-400" />
             <span className="text-xs font-mono font-bold tracking-wider text-white uppercase">
-              CAMPUS SPATIAL WAYFINDING MATRIX
+              CampusFlow WAYFINDING // MASTER CAMPUS GRID
             </span>
           </div>
 

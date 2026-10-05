@@ -79,6 +79,36 @@ export default function App() {
     (c) => 'id' in c && c.id === 'c2'
   ) as ClassSession) || (WEDNESDAY_CLASSES[0] as ClassSession);
 
+  // Swipe gesture between days
+  const daysList = ['MON', 'TUE', 'WED', 'THU', 'FRI'];
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    const threshold = 50; // min 50px swipe
+
+    if (diff > threshold) {
+      // Swiped left -> next day
+      const idx = daysList.indexOf(selectedDay);
+      if (idx < daysList.length - 1) {
+        setSelectedDay(daysList[idx + 1]);
+      }
+    } else if (diff < -threshold) {
+      // Swiped right -> prev day
+      const idx = daysList.indexOf(selectedDay);
+      if (idx > 0) {
+        setSelectedDay(daysList[idx - 1]);
+      }
+    }
+    setTouchStartX(null);
+  };
+
   // Handle clicking on free period
   const handleSelectFreePeriod = (free: FreePeriod) => {
     setIsCampusMapOpen(true);
@@ -144,7 +174,11 @@ export default function App() {
 
           {/* Tab 1: TODAY (Primary Core Experience) */}
           {activeTab === 'TODAY' && (
-            <main className="pb-24 overflow-y-auto">
+            <main 
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              className="pb-24 overflow-y-auto"
+            >
               {/* Hero Section: The centerpiece answering "What is my next class, where is it, how long until it starts?" */}
               <HeroNextClass
                 session={nextClassSession}

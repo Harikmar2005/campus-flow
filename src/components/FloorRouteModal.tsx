@@ -38,7 +38,7 @@ export const FloorRouteModal: React.FC<FloorRouteModalProps> = ({
           <div className="flex items-center gap-2">
             <Compass className="w-4 h-4 text-amber-400" />
             <span className="text-xs font-mono font-bold tracking-wider text-white uppercase">
-              CAMPUS PHYSICAL WAYFINDING // {session.room}
+              CampusFlow WAYFINDING // {session.room}
             </span>
           </div>
           <button

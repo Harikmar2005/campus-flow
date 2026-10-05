@@ -23,7 +23,7 @@ export const ProfileView: React.FC = () => {
         <div className="flex items-start justify-between relative z-10">
           <div>
             <div className="text-[10px] font-mono text-amber-400 uppercase tracking-widest font-bold">
-              CAMPUS SMART PASS // RFID ACTIVE
+              CampusFlow SMART PASS // RFID ACTIVE
             </div>
             <h3 className="text-xl font-extrabold text-white mt-1">
               {USER_PROFILE.fullName}

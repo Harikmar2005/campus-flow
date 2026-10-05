@@ -1,6 +1,6 @@
 {
-  "name": "KRONOS Academic Command Center",
-  "description": "Original mobile timetable and campus wayfinding schedule for university students.",
+  "name": "CampusFlow — Student Timetable & Wayfinding",
+  "description": "Know what's next. A competition-ready mobile student timetable and campus wayfinding command center.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

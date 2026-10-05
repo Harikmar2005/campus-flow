@@ -22,8 +22,8 @@ export const BottomNav: React.FC<BottomNavProps> = ({
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#090c12]/95 border-t border-white/[0.08] backdrop-blur-lg">
-      <div className="max-w-md mx-auto grid grid-cols-4 h-16 px-2">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#090c12]/98 border-t border-white/[0.08] backdrop-blur-lg">
+      <div className="max-w-[430px] mx-auto grid grid-cols-4 h-16 px-2">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;

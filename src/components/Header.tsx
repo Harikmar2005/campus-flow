@@ -23,56 +23,54 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="relative pt-2 pb-3 px-4 bg-[#0a0d14]/95 border-b border-white/[0.08] backdrop-blur-md">
       {/* Top Telemetry & Status Row */}
-      <div className="flex items-center justify-between text-[11px] font-mono tracking-wider text-slate-400 pb-2 border-b border-white/[0.05]">
+      <div className="flex items-center justify-between text-[11px] font-mono tracking-wider text-slate-400 pb-2 border-b border-white/[0.06]">
         <div className="flex items-center gap-2">
-          <span className="flex items-center gap-1.5 text-amber-400 font-semibold">
+          <span className="flex items-center gap-1.5 text-amber-400 font-bold tracking-tight">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
             </span>
-            KRONOS GPS
+            CampusFlow
           </span>
           <span className="text-white/20">/</span>
-          <span className="text-slate-300">CAMPUS CENTRAL</span>
+          <span className="text-slate-400 text-[10px]">CAMPUS COMMAND</span>
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1 text-slate-300 tabular-nums">
-            <Clock className="w-3 h-3 text-amber-400/80" />
-            <span>{currentSimulatedTime}</span>
+          <div className="flex items-center gap-1.5 text-slate-300 tabular-nums">
+            <Clock className="w-3.5 h-3.5 text-amber-400" />
+            <span className="font-semibold text-white">{currentSimulatedTime}</span>
           </div>
 
           <button
             onClick={onOpenMap}
             aria-label="Campus Wayfinding Map"
-            className="flex items-center gap-1 text-slate-300 hover:text-white transition-colors cursor-pointer"
+            className="flex items-center gap-1 px-2 py-0.5 bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-slate-300 hover:text-white rounded-xs transition-colors cursor-pointer"
           >
-            <Compass className="w-3.5 h-3.5 text-cyan-400" />
-            <span className="text-[10px] hidden sm:inline">MAP</span>
+            <Compass className="w-3 h-3 text-amber-400" />
+            <span className="text-[10px] font-mono">MAP</span>
           </button>
         </div>
       </div>
 
       {/* Main Student Greeting & Academic Status Block */}
-      <div className="pt-3 pb-2 flex items-start justify-between">
+      <div className="pt-2.5 pb-2 flex items-start justify-between">
         <div>
-          <div className="text-[10px] font-mono uppercase tracking-widest text-amber-400/90 font-medium">
-            Academic Command // {USER_PROFILE.semester}
+          <div className="text-[10px] font-mono uppercase tracking-wider text-amber-400 font-medium">
+            SEM 07 • CSE / CYBER SECURITY
           </div>
-          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white mt-0.5">
+          <h1 className="text-xl sm:text-2xl font-black tracking-tight text-white mt-0.5">
             GOOD MORNING, {USER_PROFILE.name}
           </h1>
-          <div className="flex items-center gap-2 mt-1 text-xs text-slate-400 font-mono">
-            <span className="text-slate-200 font-medium">{currentSchedule.fullDate}</span>
-            <span className="text-white/30">·</span>
-            <span className="text-amber-300/80 font-semibold">{USER_PROFILE.department}</span>
+          <div className="flex items-center gap-2 mt-0.5 text-xs text-slate-400 font-mono">
+            <span className="text-slate-300 font-medium">{currentSchedule.fullDate}</span>
           </div>
         </div>
 
         {/* Academic Status Node */}
         <div className="text-right">
-          <div className="inline-flex flex-col items-end border border-white/10 bg-white/[0.03] px-2.5 py-1.5 rounded-sm">
-            <span className="text-[9px] font-mono uppercase text-slate-400 tracking-wider">Standing</span>
+          <div className="inline-flex flex-col items-end border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-xs">
+            <span className="text-[9px] font-mono uppercase text-slate-400 tracking-wider">ACADEMIC STANDING</span>
             <span className="text-xs font-mono font-bold text-emerald-400">CGPA 8.92</span>
           </div>
         </div>

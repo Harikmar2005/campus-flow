@@ -62,7 +62,7 @@ export const WEDNESDAY_CLASSES: (ClassSession | { isFree: true; free: { id: stri
     floor: 'Floor 2',
     wing: 'North Wing Corridor',
     walkingMinutes: 3,
-    distanceMeters: 240,
+    distanceMeters: 140,
     professor: {
       name: 'Dr. Kumar',
       title: 'Head of Cyber Defense Lab',
